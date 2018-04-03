@@ -1,4 +1,4 @@
-package data.domain;
+package com.lumstery.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.CreatedDate;
