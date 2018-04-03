@@ -1,6 +1,16 @@
 server:
   port: 8888
-
+spring:
+  profiles: develop
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+---
 eureka:
   instance:
     hostname: configserver
@@ -8,11 +18,4 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/lumstery/expert-config
+      defaultZone: http://discovery:8761/eureka/

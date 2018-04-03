@@ -1,8 +1,7 @@
 spring:
+  profiles:
+    active: develop
   application:
     name: gateway
-  cloud:
-    config:
-      uri: http://localhost:8888
 encrypt:
   failOnError: false

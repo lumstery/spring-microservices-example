@@ -11,7 +11,7 @@ import static org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType.
 @Configuration
 public class UserMicroServiceConfig {
     @Bean
-    public DataSource testDataSource() {
+    public DataSource embeddedDataSource() {
         return new EmbeddedDatabaseBuilder().setType(HSQL).build();
     }
 }

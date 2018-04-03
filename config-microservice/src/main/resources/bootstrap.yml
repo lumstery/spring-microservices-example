@@ -1,3 +1,14 @@
 spring:
+  profiles:
+    active: develop
   application:
     name: configserver
+  cloud:
+    config:
+      enabled: false
+      server:
+        git:
+          uri: https://github.com/lumstery/spring-microservices-example-config-{application}-{profile}
+          force-pull: true
+      discovery:
+        failFast: true

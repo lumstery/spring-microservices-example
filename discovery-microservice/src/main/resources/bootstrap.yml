@@ -1,3 +1,8 @@
 spring:
+  profiles:
+    active: develop
   application:
     name: discovery
+  cloud:
+    config:
+      enabled: false
