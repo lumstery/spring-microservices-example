@@ -8,7 +8,8 @@ spring:
       enabled: false
       server:
         git:
-          uri: https://github.com/lumstery/spring-microservices-example-config-{application}-{profile}
+          uri: https://github.com/lumstery/spring-microservices-example-config
+          searchPaths: "{profile}/{application}/"
           force-pull: true
       discovery:
         failFast: true
